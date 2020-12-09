@@ -11,9 +11,12 @@ const cors = require("cors");
 dotenv.config();
 
 const app = express();
+var corsOptions = {
+  origin: "https://stationf-test-abdelghafour-elghazi.netlify.app",
+};
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use("/reservations", reservationRoutes);
 
