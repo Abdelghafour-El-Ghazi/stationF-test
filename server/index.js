@@ -11,7 +11,7 @@ const cors = require("cors");
 dotenv.config();
 
 const app = express();
-var corsOptions = {
+const corsOptions = {
   origin: "https://stationf-test-abdelghafour-elghazi.netlify.app",
 };
 app.use(bodyParser.json({ extended: true }));
