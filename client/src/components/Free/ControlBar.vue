@@ -137,16 +137,15 @@ export default {
     items: ["Retro Projecteur", "TV"],
     value: [],
     chosenDate: minDay,
-    chosenStartTime: nextDayTime ? 8 : hh,
-    chosenEndTime: nextDayTime ? 9 : hh + 1,
+    chosenStartTime: nextDayTime ? 8 : hh + 1,
+    chosenEndTime: nextDayTime ? 9 : hh + 2,
     today,
-    hh: hh - 1,
+    hh,
     minDay,
   }),
   methods: {
     //Pass any change in the ControlBar variables to the Free Component in order to use them to show the free rooms
     changeHandler: function () {
-      
       this.$emit(
         "changeHandler",
         this.slider,
